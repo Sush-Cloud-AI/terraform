@@ -34,6 +34,23 @@ variable "list-ex" {
 }
 
 output "list-ex" {
-    value = "Welcome to ${var.list-ex[0]} Training , Trainer Name is ${var.list-ex[3]} and the training duration is${var.list-ex[1]} hours "
+    value = "Welcome to ${var.list-ex[0]} Training , Trainer Name is ${var.list-ex[3]} and the training duration is ${var.list-ex[1]} hours."
+
+  
+}
+
+
+### Map Variable
+
+variable "map-var" {
+    default = {
+        Class = "Devops",
+        Timing = "7AM",
+        Duration = 85
+    }  
+}
+
+output "map-var" {
+    value = " Welcome to ${var.map-var["Class"]} and the timings are ${var.map-var["Timing"]} and the duaration is ${var.map-var["Duration"]}."
   
 }
