@@ -8,6 +8,6 @@ output "sample-op" {
 }
 
 output "sample-op1" {
-    value = "value is $(var.sample)"
+    value = "value is ${var.sample}"
   
 }
