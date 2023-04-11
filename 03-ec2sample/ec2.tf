@@ -4,6 +4,9 @@ resource "aws_instance" "demo" {
 
   tags = {
     Name = "first-ec2"
+    ENV = "dev"
+    Project = "cc"
+    
   }
 }
 
