@@ -61,7 +61,10 @@ variable "state" {}
 variable "country" {}
 
 output "state-country-name" {
-  value = "Name of the state where is reside is ${var.state} and mycounty is ${var.country}."
+  value = "Name of the state where is reside is ${var.state} and my county is ${var.country}."
 }
 
+
+## terraform apply -auto-approve -var country=Bharath ... passing variables from runtime 
+## runtime varibales will have higher priority than .tfvars
   
