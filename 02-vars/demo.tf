@@ -54,3 +54,14 @@ output "map-var" {
     value = " Welcome to ${var.map-var["Class"]} and the timings are ${var.map-var["Timing"]} and the duaration is ${var.map-var["Duration"]}."
   
 }
+
+## terraform.tfvars varibales demo
+
+variable "state" {}
+variable "country" {}
+
+output "state-country-name" {
+  value = "Name of the state where is reside is ${var.state} and mycounty is ${var.country}."
+}
+
+  

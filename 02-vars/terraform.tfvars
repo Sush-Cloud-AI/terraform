@@ -1,0 +1,2 @@
+state = "Karnataka"
+country = "India"
