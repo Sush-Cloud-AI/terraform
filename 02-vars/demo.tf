@@ -12,16 +12,16 @@ output "sample-op1" {
   
 }
 
-# ## default varible type
-# variable "number" {
-#     default = 100
+## default varible type
+variable "number" {
+    default = 100
 
-# }
+}
 
-# output "number" {
-#   value = var.number
+output "number" {
+  value = var.number
 
-# }
+ }
 # ## list variable
 # variable "list-ex" {
 #     default = [
