@@ -70,6 +70,9 @@ output "state-country-name" {
 
 
 ## shell variables 
-## in shell export TF_VAR_state=mysore
+## in shell export TF_VAR_state=mysore will take the state as mysore 
+## has the least priority 
+## -var/-var-file  >> *.auto.tfvars >> terraform.tfvars >> shell var
+
 
   
