@@ -40,20 +40,20 @@ output "list-ex" {
 }
 
 
-# ### Map Variable
+### Map Variable
 
-# variable "map-var" {
-#     default = {
-#         Class = "Devops",
-#         Timing = "7AM",
-#         Duration = 85
-#     }  
-# }
+variable "map-var" {
+    default = {
+        Class = "Devops",
+        Timing = "7AM",
+        Duration = 85
+    }  
+}
 
-# output "map-var" {
-#     value = " Welcome to ${var.map-var["Class"]} and the timings are ${var.map-var["Timing"]} and the duaration is ${var.map-var["Duration"]}."
+output "map-var" {
+    value = " Welcome to ${var.map-var["Class"]} and the timings are ${var.map-var["Timing"]} and the duaration is ${var.map-var["Duration"]}."
   
-# }
+}
 
 # ## terraform.tfvars varibales demo
 
