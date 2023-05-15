@@ -65,6 +65,6 @@ output "sample-op1" {
 # }
 
 
-## terraform apply -auto-approve -var country=Bharath ... passing variables from runtime 
-## runtime varibales will have higher priority than .tfvars
+# # terraform apply -auto-approve -var country=Bharath ... passing variables from runtime 
+# # runtime varibales will have higher priority than .tfvars
   
