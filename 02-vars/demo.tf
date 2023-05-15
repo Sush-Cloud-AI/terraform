@@ -24,7 +24,7 @@ output "number" {
  }
 ## list variable
 variable "list-ex" {
-    test = [
+    defdefault =  [
         "DevOps",
         100,
         false,
