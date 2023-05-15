@@ -22,22 +22,22 @@ output "number" {
   value = var.number
 
  }
-# ## list variable
-# variable "list-ex" {
-#     default = [
-#         "DevOps",
-#         100,
-#         false,
-#         "verma"
-#     ]
+## list variable
+variable "list-ex" {
+    default = [
+        "DevOps",
+        100,
+        false,
+        "verma"
+    ]
   
-# }
+}
 
-# output "list-ex" {
-#     value = "Welcome to ${var.list-ex[0]} Training , Trainer Name is ${var.list-ex[3]} and the training duration is ${var.list-ex[1]} hours."
+output "list-ex" {
+    value = "Welcome to ${var.list-ex[0]} Training , Trainer Name is ${var.list-ex[3]} and the training duration is ${var.list-ex[1]} hours."
 
   
-# }
+}
 
 
 # ### Map Variable
