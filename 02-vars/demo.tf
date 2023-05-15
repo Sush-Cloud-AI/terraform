@@ -55,14 +55,14 @@ output "map-var" {
   
 }
 
-# ## terraform.tfvars varibales demo
+## terraform.tfvars varibales demo
 
-# variable "state" {}
-# variable "country" {}
+variable "state" {}
+variable "country" {}
 
-# output "state-country-name" {
-#   value = "Name of the state where is reside is ${var.state} and my county is ${var.country}."
-# }
+output "state-country-name" {
+  value = "Name of the state where is reside is ${var.state} and my county is ${var.country}."
+}
 
 
 # # terraform apply -auto-approve -var country=Bharath ... passing variables from runtime 
