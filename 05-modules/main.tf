@@ -1,5 +1,6 @@
 module "ec2" {
   source = "./ec2"
+  sg = module.sg.sg_id
 }
 
 module "sg" {
@@ -8,6 +9,6 @@ module "sg" {
 }
 
 output "pub-ip" {
-    value = aws_instance.demo.public_ip
+    value = module.ec2.pub-ip
   
 }
