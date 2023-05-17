@@ -12,3 +12,5 @@ output "pub-ip" {
     value = module.ec2.pub-ip
   
 }
+
+## terraform modules sources can be github, s3 , local ..etc  ..terraform sources
