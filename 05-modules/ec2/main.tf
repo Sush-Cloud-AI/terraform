@@ -3,10 +3,4 @@ resource "aws_instance" "demo" {
   instance_type = "t2.micro"
   vpc_security_group_ids = [ aws_security_group.allow_ssh.id ]
 
-  tags = {
-    Name = "first-ec2"
-    ENV = "dev"
-    Project = "cc"
-    
-  }
 }
