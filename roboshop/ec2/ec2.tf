@@ -7,9 +7,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   tags = {
     Name = "var.COMPONENT"
   }
-}
-
-  provisioner "remote-exec" {
+provisioner "remote-exec" {
 
       connection {
     type     = "ssh"
@@ -21,6 +19,9 @@ resource "aws_spot_instance_request" "cheap_worker" {
      "ansible-pull -U https://github.com/Sush-Cloud-AI/ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION}"
     ]
   }
+
+}
+
 
 
 
