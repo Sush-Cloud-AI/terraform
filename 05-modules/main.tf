@@ -10,4 +10,8 @@ module "sg" {
   
 }
 
+output "publicip" {
+  source = module.ec2.publicip
+  
+}
 ## terraform modules sources can be github, s3 , local ..etc  ..terraform sources

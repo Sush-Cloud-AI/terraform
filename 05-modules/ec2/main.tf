@@ -13,3 +13,8 @@ resource "aws_instance" "demo" {
 variable "sg" {            ## decleare an empty variable of the value 
   
 }
+
+output "publicip" {
+  value = aws_instance.demo.public_ip
+  
+}
