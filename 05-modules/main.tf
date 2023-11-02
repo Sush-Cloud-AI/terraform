@@ -1,15 +1,11 @@
+# calling ec2 module
 module "ec2" {
   source = "./ec2"
-  sg = module.sg.sg_id
-}
-
-module "sg" {
-    source = "./sg"
   
 }
-
-output "pub-ip" {
-    value = module.ec2.pub-ip
+# calling sg module
+module "sg" {
+  source = "./sg"
   
 }
 
