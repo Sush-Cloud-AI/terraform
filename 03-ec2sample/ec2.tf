@@ -53,13 +53,17 @@ data "aws_ami" "base-ami" {
 }
 
 resource "aws_instance" "demo" {
+  count = length(var.instance)
   ami           = data.aws_ami.base-ami.image_id  ## argument
   instance_type = "t2.micro"
 
   tags = {
-    Name = "first-ec2"
-    ENV = "dev"
-    Project = "cc"
+    Name = "${var.instance[count.index]}"
     
   }
+}
+
+variable "instance" {
+  default = ["catalogue", "user", "cart"]
+  
 }
