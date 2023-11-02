@@ -1,6 +1,7 @@
 # calling ec2 module
 module "ec2" {
   source = "./ec2"
+  sg = module.sg.sgid           # step2: passing sg info to the module into ec2 
   
 }
 # calling sg module
