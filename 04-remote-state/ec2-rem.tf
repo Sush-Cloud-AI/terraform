@@ -1,10 +1,11 @@
 resource "aws_instance" "demo" {
+  count = var.howmany
   ami           = "ami-0ef141c0ad615f89f"  ## argument
   instance_type = "t2.micro"
   
 
   tags = {
-    Name = "first-ec2"
+    Name = "ec2-${count.index + 1}"
     ENV = "dev"
     Project = "cc"
     
