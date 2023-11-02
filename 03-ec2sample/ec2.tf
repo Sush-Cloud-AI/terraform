@@ -67,3 +67,8 @@ variable "instance" {
   default = ["catalogue", "user", "cart"]
   
 }
+
+output "priv_ip" {
+  value = aws_instance.demo.*.public_dns
+  
+}
