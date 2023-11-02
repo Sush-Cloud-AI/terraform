@@ -69,6 +69,6 @@ variable "instance" {
 }
 
 output "priv_ip" {
-  value = aws_instance.demo.*.public_dns
+  value = aws_instance.demo.*.private_ip
   
 }
