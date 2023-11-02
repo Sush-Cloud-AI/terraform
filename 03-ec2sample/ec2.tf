@@ -1,14 +1,14 @@
-resource "aws_instance" "demo" {
-  ami           = "ami-0ef141c0ad615f89f"  ## argument
-  instance_type = "t3.micro"
+# resource "aws_instance" "demo" {
+#   ami           = "ami-0ef141c0ad615f89f"  ## argument
+#   instance_type = "t3.micro"
 
-  tags = {
-    Name = "first-ec2"
-    ENV = "dev"
-    Project = "cc"
+#   tags = {
+#     Name = "first-ec2"
+#     ENV = "dev"
+#     Project = "cc"
     
-  }
-}
+#   }
+# }
 
 # }
 
@@ -44,3 +44,22 @@ resource "aws_instance" "demo" {
 #     Name = "allow_ssh"
 #   }
 # }
+
+data "aws_ami" "base-ami" {
+  most_recent      = true
+  name_regex       = "devops-ami"
+  owners           = ["self"]
+
+}
+
+resource "aws_instance" "demo" {
+  ami           = data.aws_ami.base-ami.image_id  ## argument
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "first-ec2"
+    ENV = "dev"
+    Project = "cc"
+    
+  }
+}
